@@ -1,0 +1,93 @@
+{
+  "project_info": {
+    "project_number": "997812765372",
+    "firebase_url": "https://lostfirebase.firebaseio.com",
+    "project_id": "lostfirebase",
+    "storage_bucket": "lostfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997812765372:android:5d14149fcd6f7cc0ebc6b9",
+        "android_client_info": {
+          "package_name": "com.app.lostdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997812765372-lmf0asu11n2pbm245fed0ndfvc1q75a8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.lostdemo",
+            "certificate_hash": "1b4d6d5a0c88f8c687d01aa899298725b8256112"
+          }
+        },
+        {
+          "client_id": "997812765372-cr2ek635bhjpv6f486tpt3ihgkdaqp5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-t2xu10v1PoWXK4ZOmj1JuwuQWDTv3SY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997812765372-cr2ek635bhjpv6f486tpt3ihgkdaqp5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997812765372:android:6af1b210b7f5c5b4ebc6b9",
+        "android_client_info": {
+          "package_name": "com.joe_mamdoh_shafik.lost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997812765372-ud1mka2abr4ljp900nfnacihogkjelm7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joe_mamdoh_shafik.lost",
+            "certificate_hash": "8cb0567bdb47674c33f953beacc48cf25d37a042"
+          }
+        },
+        {
+          "client_id": "997812765372-4u7d22un6058pna8gooc77ai7scmgfo1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.joe_mamdoh_shafik.lost",
+            "certificate_hash": "1b4d6d5a0c88f8c687d01aa899298725b8256112"
+          }
+        },
+        {
+          "client_id": "997812765372-cr2ek635bhjpv6f486tpt3ihgkdaqp5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-t2xu10v1PoWXK4ZOmj1JuwuQWDTv3SY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997812765372-cr2ek635bhjpv6f486tpt3ihgkdaqp5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
