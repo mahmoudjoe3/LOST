@@ -31,7 +31,7 @@ public class login extends AppCompatActivity {
             editTextMobile.requestFocus();
             return;
         }
-        Intent intent = new Intent(login.this, main_page.class);
+        Intent intent = new Intent(login.this, Verification.class);
         intent.putExtra("mobile", mobile);
         startActivity(intent);
     }
