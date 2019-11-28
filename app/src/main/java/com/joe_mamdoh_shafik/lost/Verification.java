@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -31,6 +33,7 @@ public class Verification extends AppCompatActivity {
     private EditText editTextCode;
     private Button Verify;
     private FirebaseAuth mAuth;
+    DatabaseReference Phone_Table;
     String mobile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +44,14 @@ public class Verification extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         editTextCode = (EditText) findViewById(R.id.verify_txt);
 
+        Phone_Table = FirebaseDatabase.getInstance().getReference("PhoneNumbers");
+
         //getting mobile number from the previous activity
         //and sending the verification code to the number
         Intent intent = getIntent();
         mobile = intent.getStringExtra("mobile");
         sendVerificationCode(mobile);
+
 
         Verify = (Button) findViewById(R.id.verify_btn);
         Verify.setOnClickListener(new View.OnClickListener() {
@@ -63,9 +69,13 @@ public class Verification extends AppCompatActivity {
         });
     }
 
+    private void SaveInDatabase(String mobile) {
+        Phone_Table.push().setValue(mobile);
+    }
+
     private void sendVerificationCode(String mobile) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+20"+mobile,
+                mobile,
                 60,
                 TimeUnit.SECONDS,
                 TaskExecutors.MAIN_THREAD,
@@ -119,6 +129,7 @@ public class Verification extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
+                            SaveInDatabase(mobile);
                             Intent intent = new Intent(Verification.this, main_page.class);
                             intent.putExtra("phone",mobile);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
