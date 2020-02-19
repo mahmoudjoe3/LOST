@@ -52,7 +52,7 @@ public Spinner  spinner ;
         databaseReference = FirebaseDatabase.getInstance().getReference("Items");
         ItemList = new ArrayList<>();
         ArrayAdapter<CharSequence> catogery_adapter;
-       catogery_adapter= ArrayAdapter.createFromResource(getActivity(),R.array.catogeryarray2,android.R.layout.simple_spinner_item);
+       catogery_adapter= ArrayAdapter.createFromResource(getActivity(),R.array.catogeryarray2,R.layout.spinner);
         catogery_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
           try{  spinner.setAdapter(catogery_adapter);

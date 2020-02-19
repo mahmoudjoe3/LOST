@@ -56,6 +56,7 @@ public class login extends AppCompatActivity {
         if(firstTime.equals("yes")){
             Intent intent = new Intent(login.this, main_page.class);
             startActivity(intent);
+            this.finish();
         }
     }
 
